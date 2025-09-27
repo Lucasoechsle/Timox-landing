@@ -1,5 +1,4 @@
 "use client"
-
 import { useState, useEffect } from "react"
 import Image from "next/image"
 import { ChevronLeft, ChevronRight } from "lucide-react"
@@ -69,7 +68,6 @@ export default function Banner() {
             <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center text-white p-4 space-y-4">
               <h2 className="text-3xl md:text-5xl font-bold">{banner.title}</h2>
               <p className="text-lg md:text-xl max-w-2xl">{banner.description}</p>
-
               {/* Botón único */}
               {banner.button && (
                 <Link href={banner.button.href}>
@@ -78,7 +76,6 @@ export default function Banner() {
                   </button>
                 </Link>
               )}
-
               {/* Botones dobles */}
               {banner.dualButtons && (
                 <div className="flex space-x-4 mt-4">
@@ -98,7 +95,6 @@ export default function Banner() {
           </div>
         ))}
       </div>
-
       {/* Navigation buttons */}
       <button
         onClick={prevSlide}
@@ -114,7 +110,6 @@ export default function Banner() {
       >
         <ChevronRight size={24} />
       </button>
-
       {/* Indicators */}
       <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-30 flex space-x-2">
         {banners.map((_, index) => (

@@ -1,7 +1,5 @@
 "use client"
-
 import type React from "react"
-
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -23,7 +21,6 @@ export default function ContactForm() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // Here you would typically send the form data to your backend
     console.log("Form submitted:", formData)
     alert("Mensaje enviado correctamente. Gracias por contactarnos!")
     setFormData({ name: "", email: "", phone: "", message: "" })
@@ -34,7 +31,6 @@ export default function ContactForm() {
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-6 text-center text-[rgb(46,49,145)]">Contáctenos</h2>
         <div className="h-1 w-20 bg-[rgb(46,49,145)] mx-auto mb-12"></div>
-
         <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
           {/* Contact Information */}
           <div>
@@ -63,7 +59,6 @@ export default function ContactForm() {
               </div>
             </div>
           </div>
-
           {/* Contact Form */}
           <div>
             <form onSubmit={handleSubmit} className="space-y-4">
@@ -108,4 +103,3 @@ export default function ContactForm() {
     </section>
   )
 }
-

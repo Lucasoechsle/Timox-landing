@@ -34,14 +34,12 @@ export default function Navbar() {
               </Link>
             ))}
           </nav>
-
           {/* Mobile Menu Button */}
           <button className="md:hidden text-[rgb(46,49,145)]" onClick={() => setIsMenuOpen(!isMenuOpen)}>
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
       </div>
-
       {/* Mobile Navigation */}
       {isMenuOpen && (
         <div className="md:hidden bg-white">
@@ -62,4 +60,3 @@ export default function Navbar() {
     </header>
   )
 }
-

@@ -12,7 +12,6 @@ export default function Footer() {
               Comercializamos una amplia variedad de herramientas con enfoque en discos para cortes.
             </p>
           </div>
-
           {/* Quick Links */}
           <div>
             <h3 className="text-xl font-bold mb-4">Enlaces Rápidos</h3>
@@ -39,7 +38,6 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-
           {/* Contact Info */}
           <div>
             <h3 className="text-xl font-bold mb-4">Contacto</h3>
@@ -50,7 +48,6 @@ export default function Footer() {
             </address>
           </div>
         </div>
-
         <div className="border-t border-white/20 mt-8 pt-6 text-center">
           <p>&copy; {new Date().getFullYear()} Timox. Todos los derechos reservados.</p>
         </div>
@@ -58,4 +55,3 @@ export default function Footer() {
     </footer>
   )
 }
-

@@ -27,12 +27,10 @@ export default function ProductDetail({ params }: { params: { id: string } }) {
       <Button variant="outline" onClick={() => router.push("/productos")} className="mb-6">
         <ArrowLeft className="mr-2 h-4 w-4" /> Volver a Productos
       </Button>
-
       <div className="grid md:grid-cols-2 gap-8 bg-white p-6 rounded-lg shadow">
         <div className="relative aspect-square">
           <Image src={product.image || "/placeholder.svg"} alt={product.name} fill className="object-contain" />
         </div>
-
         <div>
           <h1 className="text-3xl font-bold mb-4 text-[rgb(46,49,145)]">{product.name}</h1>
           <div className="space-y-4">
@@ -44,7 +42,6 @@ export default function ProductDetail({ params }: { params: { id: string } }) {
               <span className="font-semibold">Unidades por caja:</span> {product.unidades}
             </p>
           </div>
-
           <div className="mt-8 p-4 bg-gray-50 rounded-lg">
             <h2 className="text-xl font-semibold mb-2 text-[rgb(46,49,145)]">Información del Producto</h2>
             <p className="text-[rgb(138,137,140)]">
@@ -57,4 +54,3 @@ export default function ProductDetail({ params }: { params: { id: string } }) {
     </div>
   )
 }
-

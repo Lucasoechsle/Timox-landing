@@ -10,7 +10,6 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "Timox - Herramientas y Discos de Corte",
   description: "Comercializamos una amplia variedad de herramientas con enfoque en discos para cortes.",
-    generator: 'v0.dev'
 }
 
 export default function RootLayout({
@@ -28,7 +27,5 @@ export default function RootLayout({
     </html>
   )
 }
-
-
 
 import './globals.css'

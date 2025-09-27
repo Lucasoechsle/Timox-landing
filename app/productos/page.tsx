@@ -8,11 +8,7 @@ import { Card, CardContent } from "@/components/ui/card"
 
 export default function ProductosPage() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
-
-  // Get unique categories
   const categories = Array.from(new Set(productosData.map((product) => product.category)))
-
-  // Filter products by selected category
   const filteredProducts = selectedCategory
     ? productosData.filter((product) => product.category === selectedCategory)
     : productosData
@@ -20,7 +16,6 @@ export default function ProductosPage() {
   return (
     <div className="container mx-auto py-8 px-4">
       <h1 className="text-3xl font-bold mb-8 text-[rgb(46,49,145)]">Nuestros Productos</h1>
-
       <div className="flex flex-col md:flex-row gap-8">
         {/* Filters sidebar */}
         <div className="w-full md:w-64 mb-6 md:mb-0">
@@ -49,7 +44,6 @@ export default function ProductosPage() {
             </div>
           </div>
         </div>
-
         {/* Products grid */}
         <div className="flex-1">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -78,4 +72,3 @@ export default function ProductosPage() {
     </div>
   )
 }
-

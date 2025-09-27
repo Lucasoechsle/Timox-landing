@@ -42,4 +42,3 @@ const productosData = [
 ]
 
 export default productosData
-

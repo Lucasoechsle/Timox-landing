@@ -9,7 +9,6 @@ export default function FeaturedProducts() {
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-6 text-center text-[rgb(46,49,145)]">Productos Destacados</h2>
         <div className="h-1 w-20 bg-[rgb(46,49,145)] mx-auto mb-12"></div>
-
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
           {productosDestacadosData.map((product) => (
             <Link href={`/productos/${product.id}`} key={product.id}>
@@ -30,7 +29,6 @@ export default function FeaturedProducts() {
             </Link>
           ))}
         </div>
-
         <div className="text-center mt-12">
           <Link
             href="/productos"
@@ -43,4 +41,3 @@ export default function FeaturedProducts() {
     </section>
   )
 }
-

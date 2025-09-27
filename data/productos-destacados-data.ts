@@ -42,4 +42,3 @@ const productosDestacadosData = [
 ]
 
 export default productosDestacadosData
-
