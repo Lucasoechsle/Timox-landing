@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import productosDestacadosData from "@/data/productos-destacados-data"
+import productosData from "@/data/productos-data"
 import { Card, CardContent } from "@/components/ui/card"
 
 export default function FeaturedProducts() {
@@ -10,7 +10,7 @@ export default function FeaturedProducts() {
         <h2 className="text-3xl font-bold mb-6 text-center text-[rgb(46,49,145)]">Productos Destacados</h2>
         <div className="h-1 w-20 bg-[rgb(46,49,145)] mx-auto mb-12"></div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
-          {productosDestacadosData.map((product) => (
+          {productosData.map((product) => (
             <Link href={`/productos/${product.id}`} key={product.id}>
               <Card className="h-full hover:shadow-lg transition-shadow">
                 <CardContent className="p-4">

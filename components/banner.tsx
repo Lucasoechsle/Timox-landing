@@ -1,5 +1,5 @@
 "use client"
-import { useState, useEffect } from "react"
+import { useState, useEffect, useCallback } from "react"
 import Image from "next/image"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import Link from "next/link"
@@ -33,9 +33,9 @@ const banners = [
 export default function Banner() {
   const [currentSlide, setCurrentSlide] = useState(0)
 
-  const nextSlide = () => {
+  const nextSlide = useCallback(() => {
     setCurrentSlide((prev) => (prev === banners.length - 1 ? 0 : prev + 1))
-  }
+  }, [])
 
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev === 0 ? banners.length - 1 : prev - 1))
@@ -44,7 +44,7 @@ export default function Banner() {
   useEffect(() => {
     const interval = setInterval(nextSlide, 5000)
     return () => clearInterval(interval)
-  }, [])
+  }, [nextSlide])
 
   return (
     <div className="relative w-full h-[400px] md:h-[500px] overflow-hidden">
